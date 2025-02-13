@@ -1,0 +1,20 @@
+{
+  "colors": {
+    "primary-mute": "#D3C4E7",
+    "primary-base": "#663399",
+    "object-black": "#323232",
+    "object-fill": "#F3F3F3",
+    "object-lowkey": "#959595",
+    "primary-active": "#DFD9EA"
+  },
+  "fontSize": {
+    "title-small": [
+      20,
+      {
+        "letterSpacing": 0,
+        "fontWeight": 700,
+        "lineHeight": "20px"
+      }
+    ]
+  }
+}

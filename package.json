@@ -10,12 +10,16 @@
     "preview": "vite preview",
     "prettier": "prettier --write ./src",
     "prepare": "husky",
-    "test": "echo \"No tests defined\" && exit 0"
+    "test": "echo \"No tests defined\" && exit 0",
+    "svg-optimize": "npx svgo --multipass -f ./figma/svg -o ./public/i --config=./svgo.config.cjs"
   },
   "dependencies": {
     "husky": "^9.1.7",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "clsx": "^2.1.1",
+    "lazysizes": "^5.3.2",
+    "sass": "^1.82.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.6.1",
@@ -40,6 +44,8 @@
     "prettier": "^3.4.2",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.18.2",
-    "vite": "^6.0.5"
+    "vite": "^6.0.5",
+    "svgo": "^3.3.2",
+    "tailwindcss": "^3.4.1"
   }
 }
