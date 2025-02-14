@@ -1,8 +1,9 @@
+import { RouterProvider } from 'react-router-dom';
+import router from './routes';
 import './App.css';
-import { MainLayoutContainer } from './components/Layout/MainLayoutContainer';
 
 function App() {
-  return <MainLayoutContainer>hello world</MainLayoutContainer>;
+  return <RouterProvider router={router} />;
 }
 
 export default App;
