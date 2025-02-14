@@ -3,6 +3,7 @@ import { GridContainer } from '../core/GridContainer';
 import { Box } from '../core/Box';
 import { Typography } from '../core/Typography';
 import { Header } from './Header';
+import { Outlet } from 'react-router-dom';
 
 export function MainLayoutContainer({ children }: { children: React.ReactNode }) {
   return (
@@ -15,8 +16,16 @@ export function MainLayoutContainer({ children }: { children: React.ReactNode })
       </Box>
 
       <Box tag='footer' backgroundColor='bg-object-lowkey' className='p-4 text-center'>
-        <Typography>&copy; 2024 My App. All rights reserved.</Typography>
+        <Typography>footer</Typography>
       </Box>
     </GridContainer>
+  );
+}
+
+export function LayoutWrapper() {
+  return (
+    <MainLayoutContainer>
+      <Outlet />
+    </MainLayoutContainer>
   );
 }
