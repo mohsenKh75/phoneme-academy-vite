@@ -7,7 +7,6 @@ export type ValidTags = keyof JSX.IntrinsicElements;
 export interface BoxProps<T extends ValidTags = 'div'> {
   tag?: T;
   customRef?: ComponentProps<T>['ref'];
-  //TODO: add bg-border color types
   backgroundColor?: `bg-${ColorType}`;
   borderColor?: string;
   boxShadow?: string;
