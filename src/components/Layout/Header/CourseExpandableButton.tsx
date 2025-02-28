@@ -6,14 +6,14 @@ import { ExpandableComponent } from '@/components/shared/ExpandableComponent';
 import { ASSETS } from '@/constants/assetsPath';
 
 const mockCourse = ['انگلیسی', 'ایتالیایی', 'آلمانی', 'ترکی'];
-
+// TODO: fix course itm width issue - discuss with mahbod
 export function CourseExpandableButton() {
   return (
     <ExpandableComponent
       title={
         <>
-          <Image src={ASSETS.arrowRight} width={18} height={18} />
-          <Typography variant='text-title-small' color='text-object-black'>
+          <Image className='cursor-pointer' src={ASSETS.arrowRight} width={18} height={18} />
+          <Typography className='cursor-pointer' variant='text-title-small' color='text-object-black'>
             دوره ها
           </Typography>
         </>
@@ -23,19 +23,19 @@ export function CourseExpandableButton() {
           xSpacing='space-x-2'
           alignItems='items-center'
           justifyContent='justify-between'
-          className='h-[37px]'
+          className='h-[24px] cursor-pointer'
         >
           {mockCourse?.map((c) => (
             <Box
               key={c}
-              className='transition-colors duration-75 w-full rounded-full flex justify-center hover:bg-primary-active'
+              className='transition-colors shrink-0 duration-75 rounded-full flex justify-center hover:bg-primary-active'
             >
               <Typography variant='text-title-small'>{c}</Typography>
             </Box>
           ))}
         </GridContainer>
       }
-      className='h-[43px] border-2 border-object-black rounded-full'
+      className='h-[30px] border-2 border-object-black rounded-full'
     ></ExpandableComponent>
   );
 }
