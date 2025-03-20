@@ -1,6 +1,5 @@
 import type { Config } from 'tailwindcss';
 const figmaTheme = require('./figma/tailwind.theme.json');
-console.log('logged', figmaTheme);
 
 export default {
   content: [

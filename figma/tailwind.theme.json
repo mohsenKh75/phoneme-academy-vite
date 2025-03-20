@@ -1,12 +1,12 @@
 {
   "colors": {
     "base-background": "#f7f7f7",
-    "primary-mute": "#D3C4E7",
+    "primary-active": "#D3C4E7",
     "primary-base": "#663399",
     "object-black": "#323232",
     "object-fill": "#F3F3F3",
     "object-lowkey": "#959595",
-    "primary-active": "#DFD9EA",
+    "primary-hover": "#DFD9EA",
     "card": "#EEE8F9",
     "text": "#323232"
   },

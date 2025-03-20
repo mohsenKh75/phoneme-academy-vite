@@ -5,11 +5,21 @@ import { Image } from '../../core/Image';
 import { Typography } from '../../core/Typography';
 import { CourseExpandableButton } from './CourseExpandableButton';
 
-export function DesktopHeader() {
+interface Props {
+  hamClick: (isOpen: boolean) => void;
+  isOpen: boolean;
+}
+export function DesktopHeader({ hamClick, isOpen }: Props) {
   return (
     <GridContainer alignItems='items-center' justifyContent='justify-between'>
       <GridContainer alignItems='items-center' className='flex-1 gap-2'>
-        <Image className='cursor-pointer' src={ASSETS.ham} width={30} height={30} />
+        <Image
+          onClick={() => hamClick(!isOpen)}
+          className='cursor-pointer xl:hidden'
+          src={isOpen ? ASSETS.close : ASSETS.ham}
+          width={isOpen ? 30 : 30}
+          height={isOpen ? 30 : 30}
+        />
         <Image className='cursor-pointer' src={ASSETS.phonemeAcademy} width={63} height={63} />
         <Typography className='pl-4 shrink-0'>فونم آکادمی</Typography>
         {

@@ -1,19 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { GridContainer } from '../core/GridContainer';
 import { Box } from '../core/Box';
 import { Typography } from '../core/Typography';
 import { Header } from './Header';
 import { Outlet } from 'react-router-dom';
 import { Sidebar } from './Sidebar';
+import useMedia from 'use-media';
 
 export function MainLayoutContainer({ children }: { children: React.ReactNode }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const isXlScreen = useMedia({ minWidth: '1280px' });
+  useEffect(() => {
+    if (isXlScreen) {
+      setIsOpen(true);
+    }
+  }, [isXlScreen]);
+
   return (
     <GridContainer direction='flex-col' className='mx-auto min-h-screen h-full' dir='rtl'>
       <Box tag='header' backgroundColor='bg-base-background' className='max-h-[75px] fixed w-full shadow-md px-4'>
-        <Header />
+        <Header hamClick={setIsOpen} isOpen={isOpen} />
       </Box>
       <GridContainer className='my-[92px] h-screen'>
-        <Sidebar />
+        <Sidebar isExpanded={isOpen} />
         <Box tag='main' className='flex-1 container mx-auto px-4'>
           {children}
         </Box>

@@ -28,7 +28,7 @@ export function CourseExpandableButton() {
           {mockCourse?.map((c) => (
             <Box
               key={c}
-              className='transition-colors shrink-0 duration-75 rounded-full flex justify-center hover:bg-primary-active'
+              className='transition-colors shrink-0 duration-75 rounded-full flex justify-center hover:bg-primary-hover'
             >
               <Typography variant='text-title-small'>{c}</Typography>
             </Box>
