@@ -11,5 +11,6 @@ export const ASSETS = {
   school: '/i/school.svg',
   support: '/i/support.svg',
   notification: '/i/notification.svg',
-  payment: '/i/payment.svg'
+  payment: '/i/payment.svg',
+  close: '/i/close.svg'
 };

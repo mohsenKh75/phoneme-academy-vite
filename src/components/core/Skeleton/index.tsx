@@ -20,7 +20,7 @@ export function Skeleton({
   isCircle,
   itemClassName,
   radius,
-  backGroundColor = 'bg-primary-mute'
+  backGroundColor = 'bg-primary-active'
 }: Props) {
   const style = {
     width,
