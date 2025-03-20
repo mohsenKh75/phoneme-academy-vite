@@ -15,7 +15,7 @@ export function DesktopHeader({ hamClick, isOpen }: Props) {
       <GridContainer alignItems='items-center' className='flex-1 gap-2'>
         <Image
           onClick={() => hamClick(!isOpen)}
-          className='cursor-pointer'
+          className='cursor-pointer xl:hidden'
           src={isOpen ? ASSETS.close : ASSETS.ham}
           width={isOpen ? 30 : 30}
           height={isOpen ? 30 : 30}

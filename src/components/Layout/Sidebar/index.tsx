@@ -18,7 +18,7 @@ export function Sidebar({ isExpanded }: Props) {
       alignItems='items-center'
       ySpacing='space-y-2'
       className={classnames(
-        'hidden md:flex ease-in-out max-h-[642px] rounded-2xl mr-8 overflow-x-hidden',
+        'no-scrollbar hidden md:flex ease-in-out max-h-[642px] rounded-2xl mr-8 overflow-x-hidden',
         styles.expandable,
         {
           [`${styles.expanded}`]: isExpanded,
