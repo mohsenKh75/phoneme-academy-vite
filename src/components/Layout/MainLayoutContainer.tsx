@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { GridContainer } from '../core/GridContainer';
 import { Box } from '../core/Box';
 import { Typography } from '../core/Typography';
@@ -6,11 +6,28 @@ import { Header } from './Header';
 import { Outlet } from 'react-router-dom';
 import { Sidebar } from './Sidebar';
 import useMedia from 'use-media';
+import { classnames } from '@/utils/classnames';
 
 export function MainLayoutContainer({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
   const isXlScreen = useMedia({ minWidth: '1280px' });
+
+  const [elementXSpacing, setElementXSpacing] = useState('112px');
+
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+
+    if (isOpen) {
+      setElementXSpacing('267px');
+    } else {
+      timeoutId = setTimeout(() => setElementXSpacing('112px'), 300);
+    }
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [isOpen]);
+  useLayoutEffect(() => {
     if (isXlScreen) {
       setIsOpen(true);
     }
@@ -23,7 +40,11 @@ export function MainLayoutContainer({ children }: { children: React.ReactNode })
       </Box>
       <GridContainer className='my-[92px] h-screen'>
         <Sidebar isExpanded={isOpen} />
-        <Box tag='main' className='flex-1 container mx-auto px-4'>
+        <Box
+          tag='main'
+          style={{ marginRight: elementXSpacing }}
+          className={classnames('flex-1 container mx-auto px-4 transition-all duration-300')}
+        >
           {children}
         </Box>
       </GridContainer>
