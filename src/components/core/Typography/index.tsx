@@ -23,7 +23,7 @@ export function Typography<T extends ValidTags = 'p'>({
   const boxTag = tag || ('p' as T);
 
   return (
-    <Box<T> tag={boxTag} className={classnames(color, backgroundColor, align, className)} {...props}>
+    <Box<T> tag={boxTag} className={classnames(color, backgroundColor, align, className, variant)} {...props}>
       {children}
     </Box>
   );

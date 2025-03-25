@@ -12,5 +12,12 @@ export const ASSETS = {
   support: '/i/support.svg',
   notification: '/i/notification.svg',
   payment: '/i/payment.svg',
-  close: '/i/close.svg'
+  close: '/i/close.svg',
+  video: '/i/video.svg',
+  homeWorks: '/i/home-works.svg',
+  chevronRight: '/i/chevron-right.svg',
+  chevronLeft: '/i/chevron-left.svg',
+  info: '/i/info.svg',
+  danger: '/i/danger.svg',
+  check: '/i/check.svg'
 };
