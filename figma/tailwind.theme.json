@@ -8,7 +8,10 @@
     "object-lowkey": "#959595",
     "primary-hover": "#DFD9EA",
     "card": "#EEE8F9",
-    "text": "#323232"
+    "text": "#323232",
+    "accent": "#529F17",
+    "attention": "#D2524B",
+    "white": "#FFFFFF"
   },
   "fontSize": {
     "title-small": [
@@ -17,6 +20,14 @@
         "letterSpacing": 0,
         "fontWeight": 700,
         "lineHeight": "20px"
+      }
+    ],
+    "title-medium": [
+      16,
+      {
+        "letterSpacing": 0,
+        "fontWeight": 500,
+        "lineHeight": "24px"
       }
     ],
     "head-line-small": [
@@ -33,6 +44,30 @@
         "letterSpacing": 0,
         "fontWeight": 400,
         "lineHeight": "17px"
+      }
+    ],
+    "sub-bold": [
+      16,
+      {
+        "letterSpacing": 0,
+        "fontWeight": 700,
+        "lineHeight": "30px"
+      }
+    ],
+    "sub": [
+      16,
+      {
+        "letterSpacing": 0,
+        "fontWeight": 400,
+        "lineHeight": "30px"
+      }
+    ],
+    "m3-headline-medium": [
+      28,
+      {
+        "letterSpacing": 0,
+        "fontWeight": 400,
+        "lineHeight": "30px"
       }
     ]
   }

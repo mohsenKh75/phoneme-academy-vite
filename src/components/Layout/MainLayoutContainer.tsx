@@ -35,7 +35,7 @@ export function MainLayoutContainer({ children }: { children: React.ReactNode })
 
   return (
     <GridContainer direction='flex-col' className='mx-auto min-h-screen h-full' dir='rtl'>
-      <Box tag='header' backgroundColor='bg-base-background' className='max-h-[75px] fixed w-full shadow-md px-4'>
+      <Box tag='header' backgroundColor='bg-base-background' className='max-h-[75px] fixed w-full shadow-md px-4 z-50'>
         <Header hamClick={setIsOpen} isOpen={isOpen} />
       </Box>
       <GridContainer className='my-[92px] h-screen'>
