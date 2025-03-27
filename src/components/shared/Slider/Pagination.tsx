@@ -13,7 +13,7 @@ interface Props {
 }
 export function Pagination({ title, instanceRef, slides }: Props) {
   return (
-    <GridContainer className='absolute w-full top-0 px-6 pt-4 z-10' justifyContent='justify-between'>
+    <GridContainer className='absolute w-full top-0  px-6 pt-4 z-10' justifyContent='justify-between'>
       <Typography variant='text-m3-headline-medium' color='text-object-lowkey'>
         {title}
       </Typography>

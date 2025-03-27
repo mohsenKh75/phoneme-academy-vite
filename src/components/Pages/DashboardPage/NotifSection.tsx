@@ -38,7 +38,7 @@ export function NotifSection() {
           </GridContainer>
         ))}
       </Box>
-      <Button type='filled' backgroundColor='bg-primary-base' textColor='text-white'>
+      <Button shape='filled' backgroundColor='bg-primary-base'>
         مشاهده همه
       </Button>
     </WidgetBox>

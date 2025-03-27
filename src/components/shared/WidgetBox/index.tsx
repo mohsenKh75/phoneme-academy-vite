@@ -14,7 +14,7 @@ interface Props {
 export function WidgetBox({ children, customRef, className, size = 'large', title, titleClassName }: Props) {
   return (
     <Box
-      className={classnames(className, 'h-[306px] shrink-0 rounded-[27px] shadow-md', {
+      className={classnames(className, 'min-h-[306px] rounded-[27px] shadow-md', {
         'max-w-[460px]': size === 'large',
         'max-w-[215px]': size === 'small'
       })}
