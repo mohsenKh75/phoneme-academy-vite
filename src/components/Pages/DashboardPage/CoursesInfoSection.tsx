@@ -28,7 +28,7 @@ export function CoursesInfoSection() {
         ))}
       </Box>
       <Box className='flex items-end pb-4 flex-1'>
-        <Button type='filled' backgroundColor='bg-primary-base' textColor='text-white'>
+        <Button shape='filled' backgroundColor='bg-primary-base'>
           مشاهده همه
         </Button>
       </Box>

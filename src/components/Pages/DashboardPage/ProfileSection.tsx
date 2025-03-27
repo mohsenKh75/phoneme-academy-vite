@@ -17,7 +17,7 @@ export function ProfileSection() {
         <Typography variant='text-sub'>09373219722</Typography>
       </Box>
       <Box className='pb-4'>
-        <Button type='filled' backgroundColor='bg-primary-base' textColor='text-white'>
+        <Button shape='filled' backgroundColor='bg-primary-base'>
           ویرایش
         </Button>
       </Box>

@@ -38,7 +38,7 @@ export function MainLayoutContainer({ children }: { children: React.ReactNode })
       <Box tag='header' backgroundColor='bg-base-background' className='max-h-[75px] fixed w-full shadow-md px-4 z-50'>
         <Header hamClick={setIsOpen} isOpen={isOpen} />
       </Box>
-      <GridContainer className='my-[92px] h-screen'>
+      <GridContainer className='my-[92px]'>
         <Sidebar isExpanded={isOpen} />
         <Box
           tag='main'
