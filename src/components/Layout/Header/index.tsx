@@ -9,8 +9,8 @@ interface Props {
 export function Header({ hamClick, isOpen }: Props) {
   return (
     <Box>
-      <Box className='md:hidden'>this is Mobile</Box>
-      <Box className='hidden md:block'>
+      <Box className='lg:hidden'>this is Mobile</Box>
+      <Box className='hidden lg:block'>
         <DesktopHeader hamClick={hamClick} isOpen={isOpen} />
       </Box>
     </Box>

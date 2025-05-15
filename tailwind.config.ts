@@ -12,11 +12,16 @@ export default {
       xs: '480px',
       sm: '640px',
       md: '768px',
-      lg: '1024px',
+      lg: '1084px',
       xl: '1280px',
       '2xl': '1536px'
     },
     extend: {
+      fontFamily: {
+        regular: ['Regular'],
+        bold: ['Bold'],
+        light: ['Light']
+      },
       colors: {
         ...figmaTheme.colors,
         background: 'var(--background)',

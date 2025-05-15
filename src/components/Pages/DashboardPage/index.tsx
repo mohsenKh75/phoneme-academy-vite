@@ -9,7 +9,6 @@ import { classnames } from '@/utils/classnames';
 
 export function DashboardWidgetResolver() {
   const isVerticalDisplay = useMedia({ maxWidth: '1084px' });
-  console.log({ isVerticalDisplay });
 
   return (
     <Box

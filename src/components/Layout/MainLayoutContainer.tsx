@@ -5,12 +5,12 @@ import { Typography } from '../core/Typography';
 import { Header } from './Header';
 import { Outlet } from 'react-router-dom';
 import { Sidebar } from './Sidebar';
-import useMedia from 'use-media';
 import { classnames } from '@/utils/classnames';
+import { useBreakpoint } from '@/hooks/useBreakpoints';
 
 export function MainLayoutContainer({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
-  const isXlScreen = useMedia({ minWidth: '1280px' });
+  const { breakpoint, isMobile } = useBreakpoint();
 
   const [elementXSpacing, setElementXSpacing] = useState('112px');
 
@@ -28,13 +28,13 @@ export function MainLayoutContainer({ children }: { children: React.ReactNode })
     };
   }, [isOpen]);
   useLayoutEffect(() => {
-    if (isXlScreen) {
+    if (breakpoint === 'xl') {
       setIsOpen(true);
     }
-  }, [isXlScreen]);
+  }, [breakpoint]);
 
   return (
-    <GridContainer direction='flex-col' className='mx-auto min-h-screen h-full' dir='rtl'>
+    <GridContainer direction='flex-col' className='font-regular mx-auto min-h-screen h-full' dir='rtl'>
       <Box tag='header' backgroundColor='bg-base-background' className='max-h-[75px] fixed w-full shadow-md px-4 z-50'>
         <Header hamClick={setIsOpen} isOpen={isOpen} />
       </Box>
@@ -42,7 +42,7 @@ export function MainLayoutContainer({ children }: { children: React.ReactNode })
         <Sidebar isExpanded={isOpen} />
         <Box
           tag='main'
-          style={{ marginRight: elementXSpacing }}
+          style={{ marginRight: isMobile ? 'auto' : elementXSpacing }}
           className={classnames('flex-1 container mx-auto px-4 transition-all duration-300')}
         >
           {children}
