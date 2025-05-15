@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Regular';
+  src: url('../src/assets/fonts/IRANYekan[@mimvid]-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Bold';
+  src: url('../src/assets/fonts/IRANYekan[@mimvid]-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Light';
+  src: url('../src/assets/fonts/IRANYekan[@mimvid]-Light.ttf') format('truetype');
+}
 @layer utilities {
   .no-scrollbar {
     -ms-overflow-style: none;

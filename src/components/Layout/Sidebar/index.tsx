@@ -18,7 +18,7 @@ export function Sidebar({ isExpanded }: Props) {
       alignItems='items-center'
       ySpacing='space-y-2'
       className={classnames(
-        'fixed no-scrollbar hidden md:flex ease-in-out h-3/4 rounded-2xl mr-8 overflow-x-hidden',
+        'fixed no-scrollbar hidden lg:flex ease-in-out h-3/4 rounded-2xl mr-8 overflow-x-hidden',
         styles.expandable,
         {
           [`${styles.expanded}`]: isExpanded,
@@ -36,9 +36,11 @@ export function Sidebar({ isExpanded }: Props) {
           width={isExpanded ? 118 : 80}
           height={isExpanded ? 118 : 80}
         />
-        <Typography color='text-text' variant='text-head-line-small'>
-          بروس وین
-        </Typography>
+        {isExpanded && (
+          <Typography color='text-text' variant='text-head-line-small'>
+            بروس وین
+          </Typography>
+        )}
       </GridContainer>
       <GridContainer direction='flex-col' className='w-full px-4' ySpacing='space-y-2'>
         <SidebarItem link={URLS.DASHBOARD} src={ASSETS.dashboard} showTitle={isExpanded} title='داشبورد' />

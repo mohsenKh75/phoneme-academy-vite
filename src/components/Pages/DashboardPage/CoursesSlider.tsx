@@ -8,6 +8,8 @@ import { ASSETS } from '@/constants/assetsPath';
 import { Image } from '@/components/core/Image';
 import { Pagination } from '@/components/shared/Slider/Pagination';
 import { WidgetBox } from '@/components/shared/WidgetBox';
+import { useEffect } from 'react';
+import { useBreakpoint } from '@/hooks/useBreakpoints';
 
 interface Slide {
   id: number;
@@ -38,6 +40,13 @@ export function CoursesSlider() {
   const [sliderRef, instanceRef] = useKeenSlider({
     slides: { perView: 1, spacing: 0 }
   });
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      instanceRef.current?.update();
+    }, 0);
+
+    return () => clearTimeout(timeout);
+  }, [instanceRef]);
 
   return (
     <WidgetBox className='relative pt-10 keen-slider' customRef={sliderRef}>
