@@ -23,9 +23,7 @@ export default {
         light: ['Light']
       },
       colors: {
-        ...figmaTheme.colors,
-        background: 'var(--background)',
-        foreground: 'var(--foreground)'
+        ...figmaTheme.colors
       },
       fontSize: {
         ...figmaTheme.fontSize
