@@ -1,4 +1,3 @@
-import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { GridContainer } from '../core/GridContainer';
 import { Box } from '../core/Box';
 import { Typography } from '../core/Typography';
@@ -6,40 +5,18 @@ import { Header } from './Header';
 import { Outlet } from 'react-router-dom';
 import { Sidebar } from './Sidebar';
 import { classnames } from '@/utils/classnames';
-import { useBreakpoint } from '@/hooks/useBreakpoints';
+import { useLayout } from '@/Providers/LayoutContext';
 
 export function MainLayoutContainer({ children }: { children: React.ReactNode }) {
-  const [isOpen, setIsOpen] = useState(false);
-  const { breakpoint, isMobile } = useBreakpoint();
-
-  const [elementXSpacing, setElementXSpacing] = useState('112px');
-
-  useEffect(() => {
-    let timeoutId: NodeJS.Timeout;
-
-    if (isOpen) {
-      setElementXSpacing('267px');
-    } else {
-      timeoutId = setTimeout(() => setElementXSpacing('112px'), 300);
-    }
-
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, [isOpen]);
-  useLayoutEffect(() => {
-    if (breakpoint === 'xl') {
-      setIsOpen(true);
-    }
-  }, [breakpoint]);
+  const { isSidebarOpen, setIsSidebarOpen, elementXSpacing, isMobile } = useLayout();
 
   return (
     <GridContainer direction='flex-col' className='font-regular mx-auto min-h-screen h-full' dir='rtl'>
       <Box tag='header' backgroundColor='bg-base-background' className='max-h-[75px] fixed w-full shadow-md px-4 z-50'>
-        <Header hamClick={setIsOpen} isOpen={isOpen} />
+        <Header hamClick={setIsSidebarOpen} isOpen={isSidebarOpen} />
       </Box>
       <GridContainer className='my-[92px]'>
-        <Sidebar isExpanded={isOpen} />
+        <Sidebar isExpanded={isSidebarOpen} />
         <Box
           tag='main'
           style={{ marginRight: isMobile ? 'auto' : elementXSpacing }}

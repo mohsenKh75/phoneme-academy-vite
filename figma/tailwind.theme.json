@@ -2,6 +2,7 @@
   "colors": {
     "base-background": "#f7f7f7",
     "primary-active": "#D3C4E7",
+    "secondary-active": "#D8E1D1",
     "primary-base": "#663399",
     "object-black": "#323232",
     "object-fill": "#F3F3F3",
@@ -14,6 +15,14 @@
     "white": "#FFFFFF"
   },
   "fontSize": {
+    "title-large": [
+      25,
+      {
+        "letterSpacing": "3%",
+        "fontWeight": 500,
+        "lineHeight": "100%"
+      }
+    ],
     "title-small": [
       20,
       {
@@ -60,6 +69,14 @@
         "letterSpacing": 0,
         "fontWeight": 400,
         "lineHeight": "30px"
+      }
+    ],
+    "sub-small": [
+      11,
+      {
+        "letterSpacing": "3%",
+        "fontWeight": 500,
+        "lineHeight": "100%"
       }
     ],
     "m3-headline-medium": [

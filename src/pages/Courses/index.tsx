@@ -1,3 +1,5 @@
+import { Calendar } from '@/components/Pages/Courses/Calendar';
+
 export default function Courses() {
-  return <div>courses</div>;
+  return <Calendar />;
 }
