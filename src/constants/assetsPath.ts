@@ -19,5 +19,10 @@ export const ASSETS = {
   chevronLeft: '/i/chevron-left.svg',
   info: '/i/info.svg',
   danger: '/i/danger.svg',
-  check: '/i/check.svg'
+  check: '/i/check.svg',
+  logo: '/png/logo.png',
+  telegram: '/i/telegram.svg',
+  whatsapp: '/i/whatsapp.svg',
+  email: '/i/email.svg',
+  instagram: '/i/instagram.svg'
 };
