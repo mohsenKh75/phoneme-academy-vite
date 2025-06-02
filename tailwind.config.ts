@@ -17,6 +17,7 @@ export default {
       '2xl': '1536px'
     },
     extend: {
+      backgroundImage: { 'courses-background-img': "url('/png/bg-courses.png')" },
       fontFamily: {
         regular: ['Regular'],
         bold: ['Bold'],

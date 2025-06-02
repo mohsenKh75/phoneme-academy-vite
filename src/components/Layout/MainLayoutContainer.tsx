@@ -1,11 +1,11 @@
 import { GridContainer } from '../core/GridContainer';
 import { Box } from '../core/Box';
-import { Typography } from '../core/Typography';
 import { Header } from './Header';
 import { Outlet } from 'react-router-dom';
 import { Sidebar } from './Sidebar';
 import { classnames } from '@/utils/classnames';
 import { useLayout } from '@/Providers/LayoutContext';
+import { Footer } from './Footer';
 
 export function MainLayoutContainer({ children }: { children: React.ReactNode }) {
   const { isSidebarOpen, setIsSidebarOpen, elementXSpacing, isMobile } = useLayout();
@@ -25,8 +25,8 @@ export function MainLayoutContainer({ children }: { children: React.ReactNode })
           {children}
         </Box>
       </GridContainer>
-      <Box tag='footer' backgroundColor='bg-object-lowkey' className='fixed bottom-0  w-full p-4 text-center'>
-        <Typography>footer</Typography>
+      <Box tag='footer' backgroundColor='bg-white' className='fixed bottom-0 w-full text-center h-[103px] z-50'>
+        <Footer />
       </Box>
     </GridContainer>
   );
