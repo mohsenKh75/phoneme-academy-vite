@@ -17,15 +17,17 @@ export default {
       '2xl': '1536px'
     },
     extend: {
+      backgroundImage: {
+        'courses-background-img': "url('/png/bg-courses.png')",
+        'dashboard-background-img': "url('/png/bg-dashboard.png')"
+      },
       fontFamily: {
         regular: ['Regular'],
         bold: ['Bold'],
         light: ['Light']
       },
       colors: {
-        ...figmaTheme.colors,
-        background: 'var(--background)',
-        foreground: 'var(--foreground)'
+        ...figmaTheme.colors
       },
       fontSize: {
         ...figmaTheme.fontSize

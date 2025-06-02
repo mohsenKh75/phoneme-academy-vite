@@ -1,0 +1,14 @@
+@import '../../../../styles/colors.scss';
+.custom_container {
+  background: $tw-card;
+}
+:global(.rmdp-calendar) {
+  width: 100%;
+}
+:global(.rmdp-week-day) {
+  color: $tw-object-black;
+  width: fit-content;
+  padding-right: 8px;
+}
+:global(.rmdp-today) {
+}
