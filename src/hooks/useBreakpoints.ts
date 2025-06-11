@@ -12,6 +12,7 @@ const breakpoints: Record<Breakpoint, string> = {
 interface UseBreakpointReturnTypes {
   breakpoint: Breakpoint;
   isMobile: boolean;
+  isDesktop: boolean;
 }
 export function useBreakpoint(): UseBreakpointReturnTypes {
   const getBreakpoint = (): Breakpoint => {
@@ -40,6 +41,7 @@ export function useBreakpoint(): UseBreakpointReturnTypes {
       mediaQList.forEach((q) => q.removeEventListener('change', onResize));
     };
   }, []);
-  const isMobile = breakpoint === 'md' || breakpoint === 'sm';
-  return { breakpoint, isMobile };
+  const isMobile = breakpoint === 'md';
+  const isDesktop = breakpoint === 'xl' || breakpoint === '2xl';
+  return { breakpoint, isMobile, isDesktop };
 }

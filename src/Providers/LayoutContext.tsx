@@ -12,7 +12,7 @@ const LayoutContext = createContext<LayoutContextType | undefined>(undefined);
 
 export const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const { breakpoint, isMobile } = useBreakpoint();
+  const { isMobile, isDesktop } = useBreakpoint();
   const [elementXSpacing, setElementXSpacing] = useState('112px');
 
   useEffect(() => {
@@ -30,10 +30,10 @@ export const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
   }, [isSidebarOpen]);
 
   useLayoutEffect(() => {
-    if (breakpoint === 'xl') {
+    if (isDesktop) {
       setIsSidebarOpen(true);
     }
-  }, [breakpoint]);
+  }, [isDesktop]);
 
   return (
     <LayoutContext.Provider value={{ isSidebarOpen, setIsSidebarOpen, elementXSpacing, isMobile }}>
