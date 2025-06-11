@@ -11,11 +11,12 @@ import { getBackgroundImg, PagesBgTypes } from '@/utils/getBackgroundImg';
 export function MainLayoutContainer({ children }: { children: React.ReactNode }) {
   const { isSidebarOpen, setIsSidebarOpen, elementXSpacing, isMobile } = useLayout();
   const { pathname } = useLocation();
+  console.log({ isSidebarOpen });
 
   return (
     <GridContainer
       direction='flex-col'
-      className={classnames('font-regular mx-auto min-h-screen ', getBackgroundImg(pathname as PagesBgTypes))}
+      className={classnames('font-regular mx-auto min-h-screen', getBackgroundImg(pathname as PagesBgTypes))}
       dir='rtl'
     >
       <Box tag='header' backgroundColor='bg-base-background' className='max-h-[75px] fixed w-full shadow-md px-4 z-50'>
