@@ -1,11 +1,16 @@
 import { Box } from '@/components/core/Box';
+import { GridContainer } from '@/components/core/GridContainer';
+import { MainLayout } from '@/components/Layout/MainLayout';
 import { Calendar } from '@/components/Pages/Courses/Calendar';
+import { CoursesDetails } from '@/components/Pages/Courses/CoursesDetails';
 
 export default function Courses() {
   return (
-    // TODO: create separate layout for the pages and use these classnames to handle height.
-    <Box className='bg-courses-background-img bg-no-repeat bg-fixed bg-left-bottom  min-h-[calc(100dvh-190px)] h-full'>
-      <Calendar />
-    </Box>
+    <MainLayout>
+      <GridContainer direction='flex-col' ySpacing='space-y-5'>
+        <Calendar />
+        <CoursesDetails />
+      </GridContainer>
+    </MainLayout>
   );
 }
