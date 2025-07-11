@@ -10,7 +10,7 @@ export function Calendar() {
   const { date, goToNextMonth, goToPrevMonth, selectedDate, calendarDays } = useCalendar();
 
   return (
-    <Box backgroundColor='bg-card' className='max-w-[390px] p-4 rounded-[27px] shadow-md'>
+    <Box backgroundColor='bg-card' className='max-w-[390px] w-full p-4 rounded-[27px] shadow-md'>
       <CalendarHeader goToNextMonth={goToNextMonth} goToPrevMonth={goToPrevMonth} selectedDate={selectedDate} />
       <Box className='pt-4'>
         <Box className='grid grid-cols-7 text-center justify-items-center'>

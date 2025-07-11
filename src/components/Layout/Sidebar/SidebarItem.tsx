@@ -75,7 +75,7 @@ export function SidebarItem({ src, title, showTitle, link }: Props) {
         <Image src={src} width={24} height={24} />
       </Box>
       <Typography
-        className={classnames(hideElement, 'transition-all overflow-x-hidden duration-300 ease-in-out transform', {
+        className={classnames(hideElement, 'transition-all overflow-hidden duration-300 ease-in-out transform', {
           'translate-x-[-100%] opacity-0': !showTitle,
           'translate-x-0 opacity-100': showTitle
         })}
