@@ -11,7 +11,6 @@ import { getBackgroundImg, PagesBgTypes } from '@/utils/getBackgroundImg';
 export function MainLayoutContainer({ children }: { children: React.ReactNode }) {
   const { isSidebarOpen, setIsSidebarOpen, elementXSpacing, isMobile } = useLayout();
   const { pathname } = useLocation();
-  console.log({ isSidebarOpen });
 
   return (
     <GridContainer

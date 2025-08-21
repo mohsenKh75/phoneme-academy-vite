@@ -7,5 +7,5 @@ interface Props {
   className?: string;
 }
 export function MainLayout({ children, className }: Props) {
-  return <Box className={classnames('min-h-[calc(100dvh-190px)] h-full', className)}>{children}</Box>;
+  return <Box className={classnames('min-h-[calc(100dvh-190px)] w-full h-full', className)}>{children}</Box>;
 }
