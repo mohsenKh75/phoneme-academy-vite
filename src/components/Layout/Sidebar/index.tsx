@@ -4,7 +4,6 @@ import { Typography } from '@/components/core/Typography';
 import { ASSETS } from '@/constants/assetsPath';
 import { SidebarItem } from './SidebarItem';
 import { classnames } from '@/utils/classnames';
-import styles from './Sidebar.module.scss';
 import { URLS } from '@/router/urls';
 
 interface Props {
@@ -18,12 +17,11 @@ export function Sidebar({ isExpanded }: Props) {
       alignItems='items-center'
       ySpacing='space-y-2'
       className={classnames(
-        'fixed no-scrollbar hidden lg:flex ease-in-out h-3/4 rounded-2xl mr-8 overflow-x-hidden',
-        styles.expandable,
+        'fixed no-scrollbar hidden lg:flex ease-in-out h-3/4 rounded-2xl mr-8 overflow-x-hidden expandable',
         {
-          [`${styles.expanded}`]: isExpanded,
-          [`${styles.shrinking}`]: !isExpanded,
-          'w-[235px]': isExpanded,
+          'animate-shake-expand': isExpanded,
+          'animate-shake-shrink': !isExpanded,
+          'w-[200px]': isExpanded,
           'w-[85px]': !isExpanded
         }
       )}

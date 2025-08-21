@@ -13,15 +13,15 @@ const LayoutContext = createContext<LayoutContextType | undefined>(undefined);
 export const LayoutProvider = ({ children }: { children: React.ReactNode }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const { isMobile, isDesktop } = useBreakpoint();
-  const [elementXSpacing, setElementXSpacing] = useState('112px');
+  const [elementXSpacing, setElementXSpacing] = useState('0px');
 
   useEffect(() => {
     let timeoutId: NodeJS.Timeout;
 
     if (isSidebarOpen) {
-      setElementXSpacing('267px');
+      setElementXSpacing('20px');
     } else {
-      timeoutId = setTimeout(() => setElementXSpacing('112px'), 300);
+      timeoutId = setTimeout(() => setElementXSpacing('0px'), 300);
     }
 
     return () => {
