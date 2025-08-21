@@ -24,4 +24,15 @@
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
+  .expandable {
+    @apply relative transition-all duration-[500ms] ease-custom-ease will-change-[height,width,transform];
+  }
+
+  .expanded {
+    @apply animate-shake-expand;
+  }
+
+  .shrinking {
+    @apply animate-shake-shrink;
+  }
 }
