@@ -19,7 +19,7 @@ export function CoursesDetails() {
     setCourseTime(time);
   }
   return (
-    <GridContainer direction='flex-col' ySpacing='space-y-1' className='max-w-[692px] w-full'>
+    <GridContainer direction='flex-col' ySpacing='space-y-1' className='w-full max-w-[778px]'>
       <CoursesHeader courseTime={courseTime} onCourseChange={changeCourseTime} />
       {courses?.map((course, idx) => (
         <GridContainer

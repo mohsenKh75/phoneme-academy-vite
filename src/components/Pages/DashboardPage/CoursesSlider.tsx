@@ -9,6 +9,7 @@ import { Pagination } from '@/components/shared/Slider/Pagination';
 import { WidgetBox } from '@/components/shared/WidgetBox';
 import { useEffect } from 'react';
 import { useLayout } from '@/Providers/LayoutContext';
+import { CapsuleButton } from '@/components/shared/Button/CapsuleButton';
 
 interface Slide {
   id: number;
@@ -43,7 +44,7 @@ export function CoursesSlider() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       instanceRef.current?.update();
-    }, 180);
+    }, 300);
 
     return () => clearTimeout(timeout);
   }, [instanceRef, elementXSpacing]);
@@ -66,20 +67,7 @@ export function CoursesSlider() {
             </GridContainer>
             <Typography className='pb-3'>{slide.sessionInfo.remaining}</Typography>
           </Box>
-          <GridContainer>
-            <Button
-              shape='outlined'
-              type='primaryHover'
-              roundedSide='right'
-              className='border-l-0'
-              leftIcon={ASSETS.homeWorks}
-            >
-              ویدیو
-            </Button>
-            <Button shape='filled' type='primaryHover' roundedSide='left' leftIcon={ASSETS.video}>
-              تکالیف
-            </Button>
-          </GridContainer>
+          <CapsuleButton buttonsTitle={['ویدیو', 'تکالیف']} iconsSrc={[ASSETS.homeWorks, ASSETS.video]} />
         </Box>
       ))}
     </WidgetBox>
